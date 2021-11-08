@@ -87,3 +87,13 @@
         background-color: #ffd460;
     }
 }
+
+@media all and (max-width: 400px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .articles {
+        flex-direction: column;
+    }
+}
