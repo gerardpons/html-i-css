@@ -1,7 +1,14 @@
 * {
-    margin: 10px;
-    padding: 10px;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .main {
@@ -12,88 +19,210 @@
 }
 
     .header {
-        background-color: black;
+        background: url(images/header.jpg);
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
         display: flex;
         flex-flow: column nowrap;
+        margin-bottom: 10px;
+        padding-top: 30px;
     }
 
         .menu {
-            background-color: #2d4059;
             display: flex;
+            align-items: center;
+            margin: 0 25px;
         }
 
             .logo {
-                background-color: #ea5455;
                 flex: 1 1 auto;
             }
+
+                .logo img {
+                    height: 90px;
+                }
 
             .navItems {
-                background-color: #ea5455;
                 flex: 5 1 auto;
+                display: flex;
+                justify-content: center;
             }
+
+                .navItems i {
+                    padding-right: 10px;
+                }
+
+                .navItems a {
+                    color: #808080;
+                    padding: 0 25px;
+                }
+
+                    .navItems a:hover {
+                        color: #DF7B69;
+                    }
 
             .socialMedia {
-                background-color: #ea5455;
                 flex: 1 1 auto;
+                display: flex;
+                justify-content: flex-end;
             }
 
+                .socialMedia a {
+                    color: #808080;
+                    padding-left: 10px;
+                }
+
+                    .socialMedia a:hover {
+                        color: #DF7B69;
+                    }
+
         .banner {
-            background-color: #f07b3f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
         }
-            h1 {
-                background-color: #ffd460;
+            .banner h1 {
+                color: #DF7B69;
+                font-family: 'Lora', serif;
+                font-size: 24px;
+                letter-spacing: 1px;
+                opacity: 75%;
+                margin: 50px;
+                text-align: center;
             }
 
     .section {
-        background-color: black;
+        background-color: white;
         display: flex;
     }
 
         .articles {
-            background-color: #2d4059;
+            background-color: #D9D7D7;
             flex: 2 1 auto;
             display: flex;
             flex-flow: row wrap;
         }
 
             .articlesItem {
-                background-color: #376AAB;
                 flex: 1 1 40%;
+                background-color: #F4F1F1;
+                padding: 10px;
+                margin: 10px;
+                width: 100%;
+                min-width: 250px;
             }
 
+                .articlesItem img {
+                    max-width: 100%;
+                    height: auto;
+                    margin-bottom: 3px;
+                }
+
+                    .articlesItem h3 {
+                        margin-top: -30px;
+                        color: #E2DB90;
+                        font-weight: 400;
+                        padding-left: 5px;
+                    }
+
+                    .articlesItem h2 {
+                        background-color: #E18683;
+                        color: #F4F1F1;
+                        padding: 15px 5px 5px 5px;
+                        letter-spacing: 2px;
+                        font-weight: 400;
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        margin-top: -13px;
+                    }
+
+                    .articlesItem p {
+                        column-count: 2;
+                        color: #555554;
+                        padding-left: 5px;
+                    }
+
+                    .articlesItem a {
+                        color: #555554;
+                        padding-left: 5px;
+                    }
+
+                        .articlesItem a:hover {
+                            color: #E18683;
+                        }
+
             .articlesFooter {
-                background-color: #7BA2C1;
+                background-color: #D8D7D7;
+                text-align: center;
                 flex: 1 1 100%;
+                padding: 10px;
             }
 
         .aside {
-            background-color: #DA5F5B;
+            background-color: #D9D7D7;
             flex: 1 1 auto;
+            margin-left: 10px;
+            position: relative;
+            min-width: 25%;
         }
             .asideContent {
-                background-color: #ffd460;
+                background-color: #D8D7D7;
+                text-align: center;
+                padding: 0px 10px;
             }
 
+                .asideContent h4 {
+                    font-weight: 700;
+                }
+
     .footer {
-        background-color: black;
+        background-color: #D9D7D7;
+        margin-top: 10px;
     }
         .footerContent {
-            background-color: #ffd460;
+            background-color: #F4F1F1;
+            color: #555554;
+            text-align: center;
+            margin: 0px 10px;
+            height: 48px;
+            line-height: 48px;
         }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 850px) {
     .section {
         flex-direction: column;
-        background-color: #ffd460;
+        background-color: white;
+    }
+
+    .aside {
+        margin: 10px 0 0 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navItems {
+        padding: 25px 0;
+    }
+
+    .articlesItem p {
+        column-count: 1;
     }
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 500px) {
     .menu {
         flex-direction: column;
     }
 
-    .articles {
-        flex-direction: column;
+    .hidden {
+        display: none;
+    }
+
+    .navItems a {
+        padding: 0 10px;
     }
 }
